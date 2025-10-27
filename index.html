@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="JW Admin Dashboard - Manage feedback, reviews, and user data for the JW Ministry App." />
+  <title>JW Admin Dashboard</title>
+
+  <!-- ✅ Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ✅ Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">JW Admin</div>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Dashboard</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="users.html">Users</a>
+      <a href="analytics.html">Analytics</a>
+     <button id="logoutBtn">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Welcome to JW Admin Dashboard</h1>
+    <p>Monitor and manage feedback, reviews, and activity from your JW Flutter app.</p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Feedback</h3>
+        <p>View and manage all user reviews and app feedback.</p>
+        <a href="feedback.html" class="btn">View Feedback</a>
+      </div>
+      <div class="card">
+        <h3>Users</h3>
+        <p>Manage user access and see their activity logs.</p>
+        <a href="users.html" class="btn">View Users</a>
+      </div>
+      <div class="card">
+        <h3>Analytics</h3>
+        <p>Get insights into usage statistics and performance.</p>
+        <a href="analytics.html" class="btn">View Analytics</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 JW Admin Panel | Built by Wisz Gem</p>
+  </footer>
+  
+  <script src="js/main.js"></script>
+  <script type="module">
+  import { logoutUser } from "./js/auth.js"; // make sure the path matches your project
+
+  // ✅ Attach click event to logout button
+  const logoutBtn = document.getElementById("logoutBtn");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      logoutUser(); // will log out and redirect to login.html
+    });
+  } else {
+    console.warn("⚠️ Logout button not found in DOM.");
+  }
+</script>
+</body>
+</html>

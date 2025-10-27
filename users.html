@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Manage JW Ministry App users and their roles." />
+  <title>Users | JW Admin</title>
+
+  <!-- ✅ Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ✅ Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ✅ Navbar -->
+  <header class="navbar">
+    <div class="logo">JW Admin</div>
+    <nav class="nav-links">
+      <a href="index.html">Dashboard</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="users.html" class="active">Users</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="login.html">Logout</a>
+    </nav>
+  </header>
+
+  <!-- ✅ Page Content -->
+  <main class="container">
+    <h1>Manage Users</h1>
+    <p>View, search, and manage all registered users from the JW Ministry App.</p>
+
+    <!-- 🔍 Search bar -->
+    <div class="search-bar">
+      <input type="text" id="searchUsers" placeholder="Search users by name or email..." />
+    </div>
+
+    <!-- 👤 User List -->
+    <div id="userList" class="user-list">
+      <!-- JS will populate user cards here -->
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 JW Admin Panel | Built by Wisz Gem</p>
+  </footer>
+
+<script type="module" src="js/users.js"></script>
+
+
+</body>
+</html>

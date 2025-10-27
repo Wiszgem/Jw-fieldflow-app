@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Manage feedback and reviews from JW Ministry App users." />
+  <title>Feedback | JW Admin</title>
+
+  <!-- ✅ Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ✅ Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ✅ Navbar -->
+  <header class="navbar">
+    <div class="logo">JW Admin</div>
+    <nav class="nav-links">
+      <a href="index.html">Dashboard</a>
+      <a href="feedback.html" class="active">Feedback</a>
+      <a href="users.html">Users</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="login.html">Logout</a>
+    </nav>
+  </header>
+
+  <!-- ✅ Page Content -->
+  <main class="container">
+    <h1>User Feedback & Reviews</h1>
+    <p>Here you can review and manage feedback submitted from the JW Flutter app.</p>
+
+    <!-- 🔍 Search bar -->
+    <div class="search-bar">
+      <input type="text" id="searchFeedback" placeholder="Search feedback..." />
+    </div>
+
+    <!-- 💬 Feedback List -->
+    <div id="feedbackList" class="feedback-list">
+      <!-- JS will populate feedback items here -->
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 JW Admin Panel | Built by Wisz Gem</p>
+  </footer>
+
+ <script type="module" src="js/feedback.js"></script>
+ <script type="module">
+  const user = localStorage.getItem("jwAdminUser");
+  if (!user) window.location.href = "login.html";
+</script>
+
+</body>
+</html>

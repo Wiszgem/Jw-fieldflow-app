@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JW Admin Analytics</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+    h1 { color: #007BFF; }
+    .stats-box { background: #fff; padding: 16px; margin-bottom: 16px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .chart-container { margin-top: 20px; }
+  </style>
+</head>
+<body>
+     <header class="navbar">
+    <div class="logo">JW Admin</div>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Dashboard</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="users.html">Users</a>
+      <a href="analytics.html">Analytics</a>
+     <button id="logoutBtn">Logout</button>
+    </nav>
+  </header>
+  <h1>📊 Analytics Dashboard</h1>
+  <button id="logoutBtn">Logout</button>
+
+  <div id="stats" class="stats-box">
+    <p>Loading analytics...</p>
+  </div>
+
+  <div class="chart-container">
+    <canvas id="feedbackChart" width="400" height="200"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="js/analytics.js"></script>
+</body>
+</html>

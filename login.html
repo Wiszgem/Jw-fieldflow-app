@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="JW Admin Panel Login" />
+  <title>Login | JW Admin</title>
+
+  <!-- ✅ Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ✅ Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ✅ Login Container -->
+  <div class="login-container">
+    <h1>JW Admin Login</h1>
+    <p>Sign in to manage JW Ministry App users.</p>
+
+    <!-- ✅ Login Form -->
+    <form id="loginForm" class="login-form">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- 🔔 Feedback message -->
+    <p id="loginMessage" class="message"></p>
+
+    <footer>
+      <p>© 2025 JW Admin Panel | Built by Wisz Gem</p>
+    </footer>
+  </div>
+
+  <!-- ✅ Firebase Auth Script -->
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>
