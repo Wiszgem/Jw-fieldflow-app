@@ -95,36 +95,143 @@ footer {
   outline: none;
 }
 
-.feedback-list {
+/* --- Premium Upgrades for Feedback Page --- */
+
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 15px;
-  margin-top: 30px;
+  padding: 1rem 2rem;
+  background: #007BFF;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.feedback-item {
-  background: white;
+.navbar .logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav-links a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #F7F7F7;
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.search-bar {
+  margin-bottom: 1.5rem;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+/* Feedback Card */
+.feedback-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.feedback-card {
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 20px;
-  width: 90%;
-  max-width: 600px;
-  text-align: left;
+  padding: 1.2rem 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.feedback-item h3 {
-  margin: 0 0 5px;
-  color: #007bff;
+.feedback-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
 
-.feedback-item p {
-  margin: 5px 0;
+.feedback-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #007BFF;
 }
 
-.feedback-item .rating {
-  color: #ffb400;
-  font-weight: bold;
+.feedback-card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.feedback-card small {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+/* Sort Dropdown */
+.sort-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.sort-container select {
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background: #fff;
+  transition: 0.2s;
+}
+
+.sort-container select:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  color: #777;
+  font-size: 0.9rem;
 }
 
 /* 👤 User Page Styles */
