@@ -54,13 +54,19 @@ async function loadFeedback() {
       const div = document.createElement("div");
       div.className = "feedback-card";
 
+ // Premium UI: Status color
+    let statusColor = "gray";
+    if (data.status?.toLowerCase() === "pending") statusColor = "#FFA500"; // orange
+    else if (data.status?.toLowerCase() === "resolved") statusColor = "#28a745"; // green
+    else if (data.status?.toLowerCase() === "rejected") statusColor = "#dc3545"; // red
+
       div.innerHTML = `
         <h3>${data.title || "No Title"}</h3>
         <p><strong>From:</strong> ${data.username || "Unknown"} (${data.email || "No Email"})</p>
         <p><strong>Role:</strong> ${data.role || "Unknown"}</p>
         <p><strong>Type:</strong> ${data.type || "General"}</p>
         <p><strong>Description:</strong> ${data.description || "No message provided."}</p>
-        <p><strong>Status:</strong> <span class="status">${data.status || "Pending"}</span></p>
+        <p><strong>Status:</strong> <span class="status" style="color:${statusColor};">${data.status || "Pending"}</span></p>
         <small>🕒 ${data.timestamp || "Unknown"}</small>
          <p><strong>Created:</strong> ${data.createdAt}</p>
       `;
