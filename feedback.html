@@ -34,6 +34,16 @@
     <div class="search-bar">
       <input type="text" id="searchFeedback" placeholder="Search feedback..." />
     </div>
+<!-- 🔀 Sort Options -->
+<div class="sort-container">
+  <label for="sortFeedback">Sort by:</label>
+  <select id="sortFeedback">
+    <option value="dateDesc" selected>Date: Newest First</option>
+    <option value="dateAsc">Date: Oldest First</option>
+    <option value="nameAsc">Name: A-Z</option>
+    <option value="nameDesc">Name: Z-A</option>
+  </select>
+</div>
 
     <!-- 💬 Feedback List -->
     <div id="feedbackList" class="feedback-list">
